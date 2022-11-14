@@ -1,13 +1,14 @@
+import { ViewController } from "../viewController.js";
 import { UserListSevice } from "./userListService.js";
 
-export class UserListViewController{
+export class UserListViewController extends ViewController {
     constructor(appManager){
-        this.appManager = appManager;
+        super(appManager);
         this.service = new UserListSevice(this);
         this.service.get();
     }
 
     showUI(users){
-        
+        console.log(users);
     }
 }

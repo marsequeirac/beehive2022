@@ -1,3 +1,7 @@
+import { User } from "../../models/user.js";
+
+
+
 export class UserListSevice {
     constructor(viewController){
         this.viewController = viewController;
@@ -8,9 +12,12 @@ export class UserListSevice {
     get(){
         var users = [];
         var request = new XMLHttpRequest();
+
+
         request.open('get',this.url);
-        request.onload = (event) => {
+        request.onload = () => {
             let data = JSON.parse(request.response);
+
             for(const id in data){
                 if (data.hasOwnProperty(id)) {
                     const userData = data[id];
@@ -23,7 +30,7 @@ export class UserListSevice {
                         userData.username, 
                         userData.postsCount, 
                         userData.todosCount, 
-                        userData.avatar)
+                        userData.avatar);
                     users.push(user);
                     
                     
@@ -34,7 +41,7 @@ export class UserListSevice {
         request.send();
 
 
-        this.viewController.showUI(users)
+        this.viewController.showUI(users);
     }
 
     put(){
