@@ -10,7 +10,7 @@
 
 import { AppManager } from "./managers/appManager.js";
 
-//Inicializa la aplicacion
+//Initialize la application
 window.addEventListener('load', init, false);
 
 function init() {

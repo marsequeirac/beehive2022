@@ -1,0 +1,26 @@
+.postListViewController{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(211, 235, 211);
+    overflow: scroll;
+}
+
+.postListViewController_fadeView{
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    background-color: aqua;
+    overflow: scroll;
+}
+
+.postListViewController_contentView{
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    background-color: aqua;
+    overflow: scroll;
+}
+
+
+

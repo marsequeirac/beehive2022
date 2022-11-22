@@ -1,12 +1,10 @@
 import { User } from "../../models/user.js";
 
-
-
-export class UserListSevice {
+export class UserListService {
     constructor(viewController){
         this.viewController = viewController;
         this.url = 'https://us-central1-beehivebackend-23257.cloudfunctions.net/app/users';
-        
+       
     }
 
     get(){
@@ -36,12 +34,12 @@ export class UserListSevice {
                     
                 }
             }
+
+            this.viewController.showUI(users);
             
         }
         request.send();
 
-
-        this.viewController.showUI(users);
     }
 
     put(){

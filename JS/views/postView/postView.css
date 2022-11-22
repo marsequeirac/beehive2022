@@ -1,0 +1,42 @@
+.postView{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+
+.postView_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.postView_body{
+    font-size: 14px;
+    
+}
+
+.postView_commentsDiv{
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+}
+
+.postView_addCommentBtn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: beige;
+    font-size: 24px;
+    font-weight: bold;
+}

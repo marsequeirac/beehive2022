@@ -1,0 +1,84 @@
+.userView{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    background-color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.userView_avatarDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+.userView_dataDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.userView_buttonsDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.userView_name{
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.userView_infoUser{
+    font-size:14px;
+    margin-left: 190px;
+}
+
+.userView_avatarImg{
+    height: 150px;
+    border-radius: 80px;
+    
+}
+
+.userView_button{
+    height: 40px;
+    border-radius: 5px;
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: beige;
+    font-size: 14px;
+    font-weight: bold;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45%;
+    
+    margin-left: 17px;
+    margin-bottom: 5px;
+    
+}
+
+.userView_button:hover{
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
