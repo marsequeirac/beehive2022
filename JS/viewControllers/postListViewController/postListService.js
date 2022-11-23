@@ -25,7 +25,7 @@ export class PostListService {
                     const commentsData = postData.comments;
                     for (const commentId in commentsData) {
                         const commentData = commentsData[commentId];
-                        var comment = new Comment(commentId, commentData.title, commentId.body);
+                        var comment = new Comment(commentId, commentData.title, commentData.body, commentData.user);
                         comments.push(comment)
                         
                     }

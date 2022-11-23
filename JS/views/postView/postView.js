@@ -1,3 +1,4 @@
+import { CommentView } from "../commentView/commentView.js";
 import { View } from "../view.js";
 
 export class PostView extends View{
@@ -26,6 +27,12 @@ export class PostView extends View{
         var commentsDiv = document.createElement('div');
         commentsDiv.className = 'postView_commentsDiv'
         this.view.appendChild(commentsDiv);
+
+        post.comments.forEach(comment => {
+            var commentView = new CommentView(this.appManager, commentsDiv, comment);
+        });
+
+
 
     }
 

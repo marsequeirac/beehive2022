@@ -14,40 +14,46 @@ export class AppManager{
         this.selectedUser = null;
 
         this.SHOWING_USERS = 1;
-        this.SHOWING_POST = 1;
-        this.SHOWING_TODOS = 1;
-        this.SHOWING_ADD_POSTS = 1;
-        this.SHOWING_ADD_TODOS = 1;
+        this.SHOWING_POST = 2;
+        this.SHOWING_TODOS = 3;
+        this.SHOWING_ADD_POSTS = 4;
+        this.SHOWING_ADD_TODOS = 5;
         this.state = this.SHOWING_USERS;
     }
     
 
     back(){
+
         switch (this.state) {
             case this.SHOWING_USERS:
-                break;
+                console.log('SHOWING_USERS')
+               break;
             case this.SHOWING_POST:
                 this.navBarView.hideBackBtn();
                 this.state =this.SHOWING_USERS;
-               // this.mainView = removeChild(this.postListViewController.view);
-                this.postListViewController.moveOut();
+                this.mainView.removeChild(this.postListViewController.view);
+                //this.postListViewController.moveOut();
                 this.postListViewController = null;
                 break;
             case  this.SHOWING_TODOS:
                 break;
             case this.SHOWING_ADD_POSTS:
-                break;
+               break;
             case this.SHOWING_ADD_TODOS:
-                break;
+               break;
             default:
                 break;
-        }
+       }
+
+       
+       
         
     }
 
     showPost(user){
         this.navBarView.showBackBtn();
-        this.state = this.SHOWING_ADD_POSTS;
+        //this.state = this.SHOWING_ADD_POSTS;
+        this.state = this.SHOWING_POST;
         this.selectedUser  = user;
         console.log(this.selectedUser);
         this.postListViewController = new PostListViewController(this, this.mainView);

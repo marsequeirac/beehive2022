@@ -11,7 +11,7 @@ export class NavBarView extends View {
         this.backBtn.onclick = this.back.bind(this);
 
         this.icon = document.createElement('img');
-        this.icon.scr = './images/icons8-doble-izquierda-40.png';
+        this.icon.src = '../images/icons8.png';
         this.backBtn.appendChild(this.icon);
 
         this.hideBackBtn();

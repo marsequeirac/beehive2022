@@ -12,7 +12,7 @@ export class UserListViewController extends ViewController{
     }
 
     showUI(users){
-
+        this.appManager.users = users;
         users.forEach(user => {
             let userView = new UserView(this.appManager, this.view, user);
         });

@@ -35,10 +35,10 @@ export class PostListViewController extends ViewController{
 
     moveOut(){
         //gsap.to(this.view,{x:window.innerWidth, duration: this.moveOutDuration, onComplete: this.destroy.bind(this)});
-        this.parent.removeChild(this.view);
+        
         //gsap.to(this.view,{x:window.innerWidth, duration: 0.5});
         //gsap.to(this.fadeview,{opacity:0, duration: this.moveOutDuration});
-        gsap.to(this.view,{x:window.innerWidth, duration: 0.5, onComplete: this.destroy.bind(this)});
+        gsap.to(this.view,{x: window.innerWidth, duration: 0.5, onComplete: this.destroy.bind(this)});
        
     }
 }
