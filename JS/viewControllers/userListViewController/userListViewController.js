@@ -9,6 +9,8 @@ export class UserListViewController extends ViewController{
         this.view.className = 'userListViewController';
         this.service = new UserListService(this);
         this.service.get();
+
+        
     }
 
     showUI(users){

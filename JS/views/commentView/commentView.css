@@ -1,10 +1,10 @@
 .commentView{
     background: #8e9eab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     margin-bottom: 5px 0px 5px 0px;
-    height: 100px;
+    height: 100vh;
     
 }
 
@@ -21,3 +21,26 @@ background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Fi
     
 }
 
+.commentView_Name{
+    font-size: 12px;
+    margin-left: 5px;
+    
+}
+
+.commentView_userDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.commentView_avatar{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    
+}

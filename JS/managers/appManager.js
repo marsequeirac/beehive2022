@@ -19,6 +19,7 @@ export class AppManager{
         this.SHOWING_ADD_POSTS = 4;
         this.SHOWING_ADD_TODOS = 5;
         this.state = this.SHOWING_USERS;
+        this.users = null;
     }
     
 
@@ -58,5 +59,18 @@ export class AppManager{
         console.log(this.selectedUser);
         this.postListViewController = new PostListViewController(this, this.mainView);
         
+    }
+
+    getUserById(id){
+        for (let i = 0; i < this.users.length; i++) {
+            const user = this.users[i];
+            if(user.id == id){
+                return user
+            }
+        }
+        
+        
+        
+        return null
     }
 }

@@ -24,5 +24,21 @@
     opacity: 0.3;
 }
 
+.postListViewController_addPostBtn{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 25px;
+    bottom: 247px;
+    right: 441px;
+
+}
+
 
 

@@ -17,6 +17,27 @@ export class CommentView extends View{
         this.view.appendChild(body);
 
 
+        var userDiv = document.createElement('div');
+        userDiv.className = 'commentView_userDiv';
+        this.view.appendChild(userDiv);
+
+
+        var user = this.appManager.getUserById(this.comment.user);
+
+
+        var avatar = document.createElement('img');
+        avatar.className = 'commentView_avatar';
+        avatar.src = user.avatar;
+        userDiv.appendChild(avatar);
+
+        var userName = document.createElement('p');
+        userName.className = 'commentView_Name';
+        userName.innerHTML = user.name;
+        userDiv.appendChild(userName);
+
+      
+
+
 
     }
 

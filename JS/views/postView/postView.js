@@ -20,7 +20,7 @@ export class PostView extends View{
         this.addCommentBtn = document.createElement('div');
         this.addCommentBtn.className = 'postView_addCommentBtn'
         this.view.appendChild(this.addCommentBtn);
-        this.addCommentBtn.innerHTML = 'ADD';
+        this.addCommentBtn.innerHTML = 'ADD COMMENT';
         this.addCommentBtn.onclick = this.addComment.bind(this);
 
 

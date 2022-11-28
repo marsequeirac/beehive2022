@@ -11,7 +11,11 @@ export class PostListViewController extends ViewController{
         this.service.get();
         //this.fadeView.className = 'postListViewController_fadeView';
         //this.contentView.className = 'postListViewController_contentView';
-        this.view.style.transform =`translate(${window.innerWidth}px, 0px)`
+        this.view.style.transform =`translate(${window.innerWidth}px, 0px)`;
+        this.addPostBtn = document.createElement('div');
+        this.addPostBtn.className = 'postListViewController_addPostBtn';
+        this.addPostBtn.innerHTML = '+';
+        this.view.appendChild(this.addPostBtn);
 
     }
 
