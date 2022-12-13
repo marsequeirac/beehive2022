@@ -1,5 +1,6 @@
 
 import { PostListViewController } from "../viewControllers/postListViewController/postListViewController.js";
+import { TodoListService } from "../viewControllers/todoListViewController/todoListService.js";
 import { UserListViewController } from "../viewControllers/userListViewController/userListViewController.js";
 import { NavBarView } from "../views/navBarView/navBarView.js";
 
@@ -33,15 +34,23 @@ export class AppManager{
                 this.navBarView.hideBackBtn();
                 this.state =this.SHOWING_USERS;
                 this.mainView.removeChild(this.postListViewController.view);
-                //this.postListViewController.moveOut();
+                this.postListViewController.moveOut();
                 this.postListViewController = null;
                 break;
             case  this.SHOWING_TODOS:
+                this.navBarView.hideBackBtn();
+                this.state = this.SHOWING_USERS;
+                this.todoListViewController.moveOut();
+                this.todoListViewController = null;
                 break;
             case this.SHOWING_ADD_POSTS:
                break;
             case this.SHOWING_ADD_TODOS:
                break;
+
+            case this.SHOWING_POST:
+                break;
+                
             default:
                 break;
        }
@@ -50,6 +59,13 @@ export class AppManager{
        
         
     }
+
+    removeLoading(){
+        this.navBarView = new NavBarView(this, this.mainView);
+        this.loadingViewController.destroy();
+        this.loadingViewController = null;
+    }
+
 
     showPost(user){
         this.navBarView.showBackBtn();
@@ -68,9 +84,20 @@ export class AppManager{
                 return user
             }
         }
+
+        return null;
         
-        
-        
-        return null
+    }
+
+    showTodo(user){
+        this.navBarView.showBackBtn();
+        this.state = this.SHOWING_TODOS;
+        this.selectedUser = user;
+        this.todoListViewController = new TodoListService(this, this.mainView);
+    }
+    
+    showaddPost(){
+        this.state = sho;
     }
 }
+    

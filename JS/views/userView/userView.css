@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    
+   
     background-color: aliceblue;
     margin-bottom: 5px;
 }
@@ -75,9 +75,9 @@ background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, F
 }
 
 .userView_button:hover{
-    background: #654ea3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2e9fc2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0f8663, #1d73b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0f8663, #1d73b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 }

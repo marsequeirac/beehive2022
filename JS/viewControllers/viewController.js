@@ -3,15 +3,21 @@ export class ViewController{
         this.appManager = appManager;
         this.parent = parent;
         this.service = null;
+
+
         this.view = document.createElement('div');
         this.parent.appendChild(this.view);
 
         this.fadeView =document.createElement('div');
-        this.parent.appendChild(this.fadeView);
-
+        this.view.appendChild(this.fadeView);
         this.contentView =document.createElement('div');
-        this.parent.appendChild(this.contentView);
+        this.view.appendChild(this.contentView);
 
+        //this.parent.appendChild(this.fadeView);
+
+       
+        //this.parent.appendChild(this.contentView);
+        
         this.moveInSpeed = 0.5;
         this.moveOut = 0.25;
     }

@@ -10,7 +10,6 @@ export class UserListViewController extends ViewController{
         this.service = new UserListService(this);
         this.service.get();
 
-        
     }
 
     showUI(users){
@@ -18,7 +17,5 @@ export class UserListViewController extends ViewController{
         users.forEach(user => {
             let userView = new UserView(this.appManager, this.view, user);
         });
-       
-
     }
 }
